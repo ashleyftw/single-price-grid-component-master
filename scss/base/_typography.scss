@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+$ff: 'Karla', sans-serif;
+
+$fw: (
+    reg: 400,
+    bold: 700
+);
+
+$fs: (
+    sm: 0.5rem,
+    base: 16px,
+    md: 1.5rem,
+    lg: 2rem,
+    xl: 2.5rem
+);
+
+:root {
+    @each $key, $val in $fw {
+        --fw-#{$key}: #{$val};
+    }
+    @each $key, $val in $fs {
+        --fs-#{$key}: #{$val};
+    }
+};

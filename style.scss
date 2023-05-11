@@ -1,0 +1,14 @@
+@use 'scss/base/reset' as *;
+@use 'scss/base/typography' as *;
+@use 'scss/base/colors' as *;
+@use 'scss/base/spacer' as *;
+
+
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a {
+  color: hsl(228, 45%, 44%); 
+}

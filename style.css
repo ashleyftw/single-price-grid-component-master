@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"); /* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --fw-reg: 400;
+  --fw-bold: 700;
+  --fs-sm: 0.5rem;
+  --fs-base: 16px;
+  --fs-md: 1.5rem;
+  --fs-lg: 2rem;
+  --fs-xl: 2.5rem;
+}
+
+:root {
+  --clr-pri-main: hsl(179, 62%, 43%);
+  --clr-pri-main-lt: hsl(179, 62%, 63%);
+  --clr-pri-accent: hsl(71, 73%, 54%);
+  --clr-neu-gr-lt: hsl(204, 43%, 93%);
+  --clr-neu-gr-bl: hsl(218, 22%, 67%);
+}
+
+:root {
+  --mar-sm: 0.5em;
+  --mar-base: 1em;
+  --mar-md: 1.5em;
+  --mar-lg: 2em;
+  --mar-xl: 2.5em;
+  --pad-sm: 0.5em;
+  --pad-base: 1em;
+  --pad-md: 1.5em;
+  --pad-lg: 2em;
+  --pad-xl: 2.5em;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */

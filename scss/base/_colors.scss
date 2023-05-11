@@ -1,0 +1,19 @@
+$colors: (
+    pri: (
+        main:  hsl(179, 62%, 43%),
+        main-lt: hsl(179, 62%, 63%),
+        accent: hsl(71, 73%, 54%)
+    ),
+    neu: (
+        gr-lt: hsl(204, 43%, 93%),
+        gr-bl: hsl(218, 22%, 67%)
+    )
+);
+
+:root {
+    @each $cat, $val in $colors {
+        @each $name, $color in $val {
+            --clr-#{$cat}-#{$name}: #{$color};
+        }
+    }
+};
