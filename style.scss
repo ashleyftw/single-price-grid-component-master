@@ -1,14 +1,86 @@
-@use 'scss/base/reset' as *;
-@use 'scss/base/typography' as *;
-@use 'scss/base/colors' as *;
-@use 'scss/base/spacer' as *;
+@use "scss/base/reset" as *;
+@use "scss/base/typography" as *;
+@use "scss/base/colors" as *;
+@use "scss/base/spacer" as *;
+@use "scss/base/mixins" as *;
 
+body {
+  background-color: var(--clr-neu-gr-lt);
+  font-family: $ff;
+  display: grid;
+  place-content: center;
+}
 
+.container {
+  margin: 0 var(--mar-lg);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgb(0 0 0 / 0.1);
+}
 
-.attribution { 
-  font-size: 11px; 
-  text-align: center; 
+.ad__description {
+  @include card;
+  background-color: white;
+  h1 {
+    color: var(--clr-pri-main);
+    font-size: var(--fs-b-md);
+  }
+  h2 {
+    color: var(--clr-pri-accent);
+    font-size: var(--fs-base);
+    margin: var(--mar-md) 0;
+  }
+  p {
+    color: var(--clr-neu-gr-bl);
+    font-size: var(--fs-sm-b);
+    line-height: 1.5rem;
+  }
+}
+
+.ad__fee {
+  @include card;
+  background-color: var(--clr-pri-main);
+  color: var(--clr-neu-gr-lt);
+  h2 {
+    font-size: var(--fs-b-md);
+  }
+  h3 {
+    font-size: var(--fs-lg);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    span {
+      font-weight: var(--fw-reg);
+      font-size: var(--fs-base);
+      color: darken(hsl(204, 43%, 93%), 10%);
+    }
+  }
+  p {
+    margin-bottom: var(--mar-md);
+  }
+  button {
+    background-color: var(--clr-pri-accent);
+    border: none;
+    color: var(--clr-neu-gr-lt);
+    padding: var(--pad-sm);
+    border-radius: 0.25rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  }
+}
+
+.ad__offers {
+  @include card;
+  background-color: mix(white, hsl(179, 62%, 43%), 20%);
+  color: var(--clr-neu-gr-lt);
+  ul {
+    padding-left: 0;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%); 
+  color: hsl(228, 45%, 44%);
 }

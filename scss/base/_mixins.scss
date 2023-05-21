@@ -1,0 +1,5 @@
+@mixin card {
+  padding: var(--pad-md);
+  display: flex;
+  flex-direction: column;
+}

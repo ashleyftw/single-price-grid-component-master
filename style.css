@@ -20,8 +20,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+ul,
+ol {
   list-style: none;
 }
 
@@ -76,7 +76,9 @@ select {
   --fw-reg: 400;
   --fw-bold: 700;
   --fs-sm: 0.5rem;
+  --fs-sm-b: 0.85rem;
   --fs-base: 16px;
+  --fs-b-md: 1.25rem;
   --fs-md: 1.5rem;
   --fs-lg: 2rem;
   --fs-xl: 2.5rem;
@@ -101,6 +103,85 @@ select {
   --pad-md: 1.5em;
   --pad-lg: 2em;
   --pad-xl: 2.5em;
+}
+
+body {
+  background-color: var(--clr-neu-gr-lt);
+  font-family: "Karla", sans-serif;
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  margin: 0 var(--mar-lg);
+  border-radius: 0.25rem;
+  overflow: hidden;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ad__description {
+  padding: var(--pad-md);
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.ad__description h1 {
+  color: var(--clr-pri-main);
+  font-size: var(--fs-b-md);
+}
+.ad__description h2 {
+  color: var(--clr-pri-accent);
+  font-size: var(--fs-base);
+  margin: var(--mar-md) 0;
+}
+.ad__description p {
+  color: var(--clr-neu-gr-bl);
+  font-size: var(--fs-sm-b);
+  line-height: 1.5rem;
+}
+
+.ad__fee {
+  padding: var(--pad-md);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-pri-main);
+  color: var(--clr-neu-gr-lt);
+}
+.ad__fee h2 {
+  font-size: var(--fs-b-md);
+}
+.ad__fee h3 {
+  font-size: var(--fs-lg);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.ad__fee h3 span {
+  font-weight: var(--fw-reg);
+  font-size: var(--fs-base);
+  color: #c1d7e6;
+}
+.ad__fee p {
+  margin-bottom: var(--mar-md);
+}
+.ad__fee button {
+  background-color: var(--clr-pri-accent);
+  border: none;
+  color: var(--clr-neu-gr-lt);
+  padding: var(--pad-sm);
+  border-radius: 0.25rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ad__offers {
+  padding: var(--pad-md);
+  display: flex;
+  flex-direction: column;
+  background-color: #55c1bf;
+  color: var(--clr-neu-gr-lt);
+}
+.ad__offers ul {
+  padding-left: 0;
 }
 
 .attribution {
