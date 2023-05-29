@@ -114,9 +114,14 @@ body {
 
 .container {
   margin: 0 var(--mar-lg);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 660px) {
+  .container {
+    margin: 0 var(--mar-base);
+  }
 }
 
 .ad__description {
@@ -124,6 +129,11 @@ body {
   display: flex;
   flex-direction: column;
   background-color: white;
+}
+@media (min-width: 660px) {
+  .ad__description {
+    padding: var(--pad-lg);
+  }
 }
 .ad__description h1 {
   color: var(--clr-pri-main);
@@ -139,6 +149,25 @@ body {
   font-size: var(--fs-sm-b);
   line-height: 1.5rem;
 }
+@media (min-width: 660px) {
+  .ad__description h1 {
+    font-size: var(--fs-md);
+  }
+  .ad__description h2 {
+    font-size: 1.125rem;
+    margin: var(--mar-base) 0;
+  }
+  .ad__description p {
+    font-size: var(--fs-base);
+  }
+}
+
+@media (min-width: 660px) {
+  .ad__feeandoffers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 .ad__fee {
   padding: var(--pad-md);
@@ -146,6 +175,11 @@ body {
   flex-direction: column;
   background-color: var(--clr-pri-main);
   color: var(--clr-neu-gr-lt);
+}
+@media (min-width: 660px) {
+  .ad__fee {
+    padding: var(--pad-lg);
+  }
 }
 .ad__fee h2 {
   font-size: var(--fs-b-md);
@@ -172,6 +206,18 @@ body {
   border-radius: 0.25rem;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
+@media (min-width: 660px) {
+  .ad__fee h2 {
+    font-size: 1.125rem;
+    margin-bottom: 0.65em;
+  }
+  .ad__fee p {
+    margin-bottom: var(--mar-lg);
+  }
+  .ad__fee button {
+    padding: 0.75em;
+  }
+}
 
 .ad__offers {
   padding: var(--pad-md);
@@ -180,8 +226,17 @@ body {
   background-color: #55c1bf;
   color: var(--clr-neu-gr-lt);
 }
+@media (min-width: 660px) {
+  .ad__offers {
+    padding: var(--pad-lg);
+  }
+}
 .ad__offers ul {
   padding-left: 0;
+}
+.ad__offers ul li {
+  font-size: var(--fs-sm-b);
+  color: #d3e3ee;
 }
 
 .attribution {

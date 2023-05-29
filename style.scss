@@ -13,9 +13,12 @@ body {
 
 .container {
   margin: 0 var(--mar-lg);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 3px 15px rgb(0 0 0 / 0.1);
+  @media (min-width: 660px) {
+    margin: 0 var(--mar-base);
+  }
 }
 
 .ad__description {
@@ -34,6 +37,25 @@ body {
     color: var(--clr-neu-gr-bl);
     font-size: var(--fs-sm-b);
     line-height: 1.5rem;
+  }
+  @media (min-width: 660px) {
+    h1 {
+      font-size: var(--fs-md);
+    }
+    h2 {
+      font-size: 1.125rem;
+      margin: var(--mar-base) 0;
+    }
+    p {
+      font-size: var(--fs-base);
+    }
+  }
+}
+
+.ad__feeandoffers {
+  @media (min-width: 660px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -66,6 +88,18 @@ body {
     border-radius: 0.25rem;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   }
+  @media (min-width: 660px) {
+    h2 {
+      font-size: 1.125rem;
+      margin-bottom: 0.65em;
+    }
+    p {
+      margin-bottom: var(--mar-lg);
+    }
+    button {
+      padding: 0.75em;
+    }
+  }
 }
 
 .ad__offers {
@@ -74,6 +108,10 @@ body {
   color: var(--clr-neu-gr-lt);
   ul {
     padding-left: 0;
+    li {
+      font-size: var(--fs-sm-b);
+      color: darken(hsl(204, 43%, 93%), 5%);
+    }
   }
 }
 
