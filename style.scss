@@ -18,6 +18,7 @@ body {
   box-shadow: 0 3px 15px rgb(0 0 0 / 0.1);
   @media (min-width: 660px) {
     margin: 0 var(--mar-base);
+    max-width: 40rem;
   }
 }
 

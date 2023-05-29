@@ -121,6 +121,7 @@ body {
 @media (min-width: 660px) {
   .container {
     margin: 0 var(--mar-base);
+    max-width: 40rem;
   }
 }
 
